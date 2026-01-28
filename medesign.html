@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MEDesign</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Page-specific styling */
+    .prose {
+      max-width: 900px;
+    }
+
+    .pill {
+      display: inline-block;
+      font-size: 12px;
+      padding: 4px 10px;
+      border: 1px solid #eee;
+      border-radius: 999px;
+      background: #fafafa;
+      color: #333;
+      margin-right: 6px;
+      margin-top: 6px;
+    }
+
+    .callout {
+      border: 1px solid #eee;
+      background: #fafafa;
+      border-radius: 14px;
+      padding: 14px 16px;
+      margin-top: 14px;
+    }
+    .callout.plain {
+      border: none;
+      background: transparent;
+      padding: 0;
+      margin-top: 12px;
+      text-align: center;
+      color: #333;
+    }
+    .callout.plain b { display: block; margin-bottom: 6px; }
+
+    .kpi {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .kpi .box {
+      border: 1px solid #eee;
+      border-radius: 14px;
+      padding: 12px 14px;
+      background: white;
+    }
+
+    .kpi .label {
+      font-size: 12px;
+      color: #555;
+    }
+
+    .kpi .value {
+      font-size: 20px;
+      font-weight: 800;
+      margin-top: 6px;
+    }
+
+    pre {
+      background: #f3f3f3;
+      padding: 14px;
+      border-radius: 12px;
+      overflow-x: auto;
+      font-size: 13px;
+    }
+
+    code {
+      background: #f3f3f3;
+      padding: 2px 6px;
+      border-radius: 8px;
+    }
+    /* Figures: full, unrounded photos with captions underneath */
+    .grid.full-photos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .grid.full-photos .photo {
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      border-radius: 0;
+      overflow: visible;
+      display: block;
+    }
+    .grid.full-photos .photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 0;
+    }
+    .grid.full-photos .photo .caption {
+      padding-top: 8px;
+      color: #333;
+      font-size: 14px;
+      text-align: center;
+    }
+    .center-grid {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+    .center-grid .card { max-width: 360px; }
+    /* Centered Excel image (no box) */
+    .center-photo { text-align: center; margin-top: 12px; }
+    .center-photo img { max-width: 560px; width: 100%; height: auto; border-radius: 0; display: inline-block; }
+  </style>
+</head>
+
+<body>
+<header>
+  <nav class="nav">
+    <a class="brand" href="index.html">Cooper Segall's Portfolio</a>
+    <div class="links">
+      <a href="solidworks.html">SOLIDWORKS Models</a>
+      <a href="neural-modeling.html">Neural Modeling</a>
+      <a href="softrobotics.html">Soft Robotics</a>
+    </div>
+  </nav>
+</header>
+
+<main class="prose">
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>MEDesign</h1>
+    <p>
+      As a team effort we are in the development stage of a medical device for pediatric asthma patients. 
+      This project is currently ongoing, so this page is subject to change as we make progress.
+    </p>
+
+    <div>
+      <span class="pill">Healthcare</span>
+      <span class="pill">Sensors</span>
+      <span class="pill">Prototyping</span>
+    </div>
+  </section>
+
+  <!-- OVERVIEW -->
+  <h2>Project Overview</h2>
+  <p>
+    Our team goal is to create a low-cost, easy-to-use device that helps monitor and manage asthma symptoms in children. 
+    We are focusing on developing a wearable sensor that tracks respiratory patterns and potentially environmental factors that may trigger asthma attacks.
+    The device is in the design process and we are validating that specific sensors would be useful in supporting patients. 
+    Below are some preliminary slides outlining our project goals and design concepts.
+  </p>
+  <div class="center-photo">
+    <img src="photos/ww.png" alt="MEDesign overview" />
+  </div>
+
+  <div class="grid center-grid" style="margin-top:12px;">
+    <div class="card">
+      <a href="photos/s.png" target="_blank" rel="noopener">
+        <img src="photos/s.png" alt="slide 1" />
+      </a>
+    </div>
+    <div class="card">
+      <a href="photos/s1.png" target="_blank" rel="noopener">
+        <img src="photos/s1.png" alt="slide 2" />
+      </a>
+    </div>
+    <div class="card">
+      <a href="photos/s2.png" target="_blank" rel="noopener">
+        <img src="photos/s2.png" alt="slide 3" />
+      </a>
+    </div>
+  <div class="card">
+        <a href="photos/s3.png" target="_blank" rel="noopener">
+            <img src="photos/s3.png" alt="slide 4" />
+        </a>
+  </div>
+   <div class="card">
+        <a href="photos/s4.png" target="_blank" rel="noopener">
+            <img src="photos/s4.png" alt="slide 5" />
+        </a>
+  </div>
+  </div>
+
+
+</main>
+</body>
+</html>

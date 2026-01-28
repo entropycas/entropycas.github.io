@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Neural Modeling</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Page-specific styling */
+    .prose {
+      max-width: 900px;
+    }
+
+    .pill {
+      display: inline-block;
+      font-size: 12px;
+      padding: 4px 10px;
+      border: 1px solid #eee;
+      border-radius: 999px;
+      background: #fafafa;
+      color: #333;
+      margin-right: 6px;
+      margin-top: 6px;
+    }
+
+    .callout {
+      border: 1px solid #eee;
+      background: #fafafa;
+      border-radius: 14px;
+      padding: 14px 16px;
+      margin-top: 14px;
+    }
+    .callout.plain {
+      border: none;
+      background: transparent;
+      padding: 0;
+      margin-top: 12px;
+      text-align: center;
+      color: #333;
+    }
+    .callout.plain b { display: block; margin-bottom: 6px; }
+
+    .kpi {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .kpi .box {
+      border: 1px solid #eee;
+      border-radius: 14px;
+      padding: 12px 14px;
+      background: white;
+    }
+
+    .kpi .label {
+      font-size: 12px;
+      color: #555;
+    }
+
+    .kpi .value {
+      font-size: 20px;
+      font-weight: 800;
+      margin-top: 6px;
+    }
+
+    pre {
+      background: #f3f3f3;
+      padding: 14px;
+      border-radius: 12px;
+      overflow-x: auto;
+      font-size: 13px;
+    }
+
+    code {
+      background: #f3f3f3;
+      padding: 2px 6px;
+      border-radius: 8px;
+    }
+    /* Figures: full, unrounded photos with captions underneath */
+    .grid.full-photos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .grid.full-photos .photo {
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      border-radius: 0;
+      overflow: visible;
+      display: block;
+    }
+    .grid.full-photos .photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 0;
+    }
+    .grid.full-photos .photo .caption {
+      padding-top: 8px;
+      color: #333;
+      font-size: 14px;
+      text-align: center;
+    }
+    /* Centered Excel image (no box) */
+    .center-photo { text-align: center; margin-top: 12px; }
+    .center-photo img { max-width: 560px; width: 100%; height: auto; border-radius: 0; display: inline-block; }
+  </style>
+</head>
+
+<body>
+<header>
+  <nav class="nav">
+    <a class="brand" href="index.html">Cooper Segall's Portfolio</a>
+    <div class="links">
+      <a href="solidworks.html">SOLIDWORKS Models</a>
+      <a href="softrobotics.html">Soft Robotics</a>
+        <a href="medesign.html">MEDesign</a>
+    </div>
+  </nav>
+</header>
+
+<main class="prose">
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Neural Modeling</h1>
+    <p>
+      Computational neuroscience project modeling action potential generation
+      and synaptic integration using a two-stage Excel → MATLAB workflow.
+    </p>
+
+    <div>
+      <span class="pill">Excel</span>
+      <span class="pill">MATLAB</span>
+      <span class="pill">Synaptic Modeling</span>
+      <span class="pill">Numerical Simulation</span>
+    </div>
+  </section>
+
+  <!-- OVERVIEW -->
+  <h2>Project Overview</h2>
+  <p>
+    This project investigates how synaptic input and membrane properties influence
+    action potential generation in neuron models.
+    A two-stage modeling workflow was used: the governing equations were first
+    constructed and validated in Excel, then translated into MATLAB for scalable
+    simulation and analysis.
+  </p>
+
+  <p>
+    This approach ensured numerical correctness and conceptual clarity before
+    implementing the model programmatically.
+  </p>
+
+  <!-- EXCEL METHODS -->
+  <h3>Initial Model Development in Excel</h3>
+  <p>
+    Excel was used as the initial modeling environment to construct and validate
+    the action potential dynamics using explicit timestep calculations.
+    Spreadsheet-based modeling allowed each term in the voltage update equation
+    to be examined independently.
+  </p>
+
+  <ul>
+    <li>
+      Each timestep was computed explicitly in Excel using forward-Euler integration.
+    </li>
+    <li>
+      Separate columns were used for leak, excitatory, and inhibitory conductances.
+    </li>
+    <li>
+      Excel plots verified correct action potential shape, timing, and amplitude.
+    </li>
+    <li>
+      Plots were generated using delta time = 0.05 over 100 seconds.
+  </ul>
+
+  <div class="callout plain">
+    <b>Why Excel first?</b>
+    Excel provided transparency and numerical validation, allowing the model
+    equations to be verified before implementation in code.
+  </div>
+
+  <div class="center-photo">
+    <img src="photos/ExcelAction.png" alt="Excel Synapse Runs" />
+    <div class="caption">Excel synapse run</div>
+  </div>
+
+  <!-- MATLAB METHODS -->
+  <h3>Translation and Simulation in MATLAB</h3>
+  <p>
+    After validating the model in Excel, the equations were translated directly
+    into MATLAB and implemented programmatically.
+    MATLAB enabled efficient simulation, automation, and stochastic input generation.
+  </p>
+
+  <ul>
+    <li>
+      Excel-validated equations were translated line-by-line into MATLAB.
+    </li>
+    <li>
+      Hodgkin–Huxley sodium and potassium channel dynamics were included.
+    </li>
+    <li>
+      MATLAB simulations produced voltage traces, conductances, and firing rates.
+    </li>
+  </ul>
+
+  <div class="callout plain">
+    <b>Key transition:</b>
+    Excel validated the mathematics; MATLAB enabled scalability,
+    faster trials and quantitative analysis.
+  </div>
+
+
+  <div class="grid full-photos">
+    <div class="photo">
+      <img src="photos/MATconduct.png" alt="MATLAB Conductance" />
+      <div class="caption">MATLAB Conductances</div>
+    </div>
+    <div class="photo">
+      <img src="photos/MATsynapses.png" alt="MATLAB Synapse Run" />
+      <div class="caption">MATLAB Voltage across 2 Runs</div>
+    </div>
+    
+  </div>
+
+   <p>
+    The simulations demonstrate how synaptic input is filtered by membrane
+    properties and how excitation can trigger spikes even when
+    average input remains subthreshold.
+  </p>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Soft Robotics</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Page-specific styling */
+    .prose {
+      max-width: 900px;
+    }
+
+    .pill {
+      display: inline-block;
+      font-size: 12px;
+      padding: 4px 10px;
+      border: 1px solid #eee;
+      border-radius: 999px;
+      background: #fafafa;
+      color: #333;
+      margin-right: 6px;
+      margin-top: 6px;
+    }
+
+    .callout {
+      border: 1px solid #eee;
+      background: #fafafa;
+      border-radius: 14px;
+      padding: 14px 16px;
+      margin-top: 14px;
+    }
+    .callout.plain {
+      border: none;
+      background: transparent;
+      padding: 0;
+      margin-top: 12px;
+      text-align: center;
+      color: #333;
+    }
+    .callout.plain b { display: block; margin-bottom: 6px; }
+
+    .kpi {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .kpi .box {
+      border: 1px solid #eee;
+      border-radius: 14px;
+      padding: 12px 14px;
+      background: white;
+    }
+
+    .kpi .label {
+      font-size: 12px;
+      color: #555;
+    }
+
+    .kpi .value {
+      font-size: 20px;
+      font-weight: 800;
+      margin-top: 6px;
+    }
+
+    pre {
+      background: #f3f3f3;
+      padding: 14px;
+      border-radius: 12px;
+      overflow-x: auto;
+      font-size: 13px;
+    }
+
+    code {
+      background: #f3f3f3;
+      padding: 2px 6px;
+      border-radius: 8px;
+    }
+    /* Figures: full, unrounded photos with captions underneath */
+    .grid.full-photos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .grid.full-photos .photo {
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      border-radius: 0;
+      overflow: visible;
+      display: block;
+    }
+    .grid.full-photos .photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 0;
+    }
+    .grid.full-photos .photo .caption {
+      padding-top: 8px;
+      color: #333;
+      font-size: 14px;
+      text-align: center;
+    }
+    .center-grid {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+    .center-grid .card { max-width: 360px; }
+    /* Centered Excel image (no box) */
+    .center-photo { text-align: center; margin-top: 12px; }
+    .center-photo img { max-width: 560px; width: 100%; height: auto; border-radius: 0; display: inline-block; }
+  </style>
+</head>
+
+<body>
+<header>
+  <nav class="nav">
+    <a class="brand" href="index.html">Cooper Segall's Portfolio</a>
+    <div class="links">
+      <a href="solidworks.html">SOLIDWORKS Models</a>
+      <a href="neural-modeling.html">Neural Modeling</a>
+        <a href="medesign.html">MEDesign</a>
+    </div>
+  </nav>
+</header>
+
+<main class="prose">
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Soft Robotics</h1>
+    <p>
+      Through biomimetic design principles, I developed soft robotic structures using Rhino8 and Adafruit.
+    </p>
+
+    <div>
+      <span class="pill">Rhino8</span>
+      <span class="pill">Soft Robotics</span>
+      <span class="pill">Prototyping</span>
+      <span class="pill">Adafruit</span>
+    </div>
+  </section>
+
+  <!-- OVERVIEW -->
+  <h2>Research Overview</h2>
+  <p>
+    By studying how marine organisms move and adapt under Dr. Yin Yu's guidance, I designed and simulated
+    soft robotic structures using Rhino8 and some physical prototypes. Using 3D print molds, 
+    silicone rubbers, and Adafruit microcontrollers, I simulated small-scale ambulatory movement. 
+    These ideas can be expanded for applications in underwater exploration, managing the nitrogen cycle, and adaptive structures.
+  </p>
+
+  <!-- 3D MODELING -->
+  <h3>Learning Rhino8</h3>
+  <p>
+    After familiarizing myself with Rhino8's interface and tools, I created various soft robotic designs inspired by natural organisms.
+    I focused on creating flexible structures that could mimic the movement of soft-bodied creatures. A challenge I faced was making sure the models 
+    were both functional and manufacturable using silicone molding techniques.
+  </p>
+
+  <div class="grid" style="margin-top:12px;">
+    <div class="card">
+      <a href="photos/octomold.png" target="_blank" rel="noopener">
+        <img src="photos/octomold.png" alt="octopus prototype" />
+        <div class="caption">Mold for octopus prototype</div>
+      </a>
+    </div>
+    <div class="card">
+      <a href="photos/sectionocto.png" target="_blank" rel="noopener">
+        <img src="photos/sectionocto.png" alt="sectional prototype" />
+        <div class="caption">Sectional octopus prototype</div>
+      </a>
+    </div>
+    <div class="card">
+      <a href="photos/tentacle.png" target="_blank" rel="noopener">
+        <img src="photos/tentacle.png" alt="tentacle prototype" />
+        <div class="caption">Tentacle prototype</div>
+      </a>
+    </div>
+  </div>
+
+ <!-- Silicone Molding -->
+  <h3>Using Silicone Rubbers</h3>
+  <p>
+    After designing molds in Rhino8, the models were then put into Bambu Studio and printed in PLA to cast the silicone rubber components.
+    This process involved careful consideration of mold design to ensure easy removal of the cured silicone parts.
+    I experimented with different silicone formulations from Smooth-On to achieve the desired flexibility and durability for the robotic structures.
+  </p>
+
+   <div class="grid center-grid">
+    <div class="card">
+      <a href="photos/sili1.jpg" target="_blank" rel="noopener">
+        <img src="photos/sili1.jpg" alt="silicone one" />
+        <div class="caption">Rubber Test 1</div>
+      </a>
+    </div>
+    <div class="card">
+      <a href="photos/sili2.jpg" target="_blank" rel="noopener">
+        <img src="photos/sili2.jpg" alt="silicone two" />
+        <div class="caption">Rubber Test 2</div>
+      </a>
+    </div>
+
+    </div>
+ <!-- Adafruit Microcontrollers -->
+  <h3>Adafruit Microcontroller</h3>
+  <p>
+    To bring the soft robot to life, I used the Adafruit CRIKIT and Playground Express microcontrollers.
+    I programmed simple inflation and deflation patterns using CircuitPython, allowing the soft robot to perform basic locomotion tasks.
+  </p>
+</p>
+
+  <div class="grid center-grid">
+    <div class="card">
+      <a href="photos/ada.jpg" target="_blank" rel="noopener">
+        <img src="photos/ada.jpg" alt="Adafruit microcontroller" />
+        <div class="caption">Adafruit microcontroller and pump system</div>
+      </a>
+    </div>
+
+</main>
+</body>
+</html>
